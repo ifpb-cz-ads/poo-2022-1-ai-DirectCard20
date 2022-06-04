@@ -59,8 +59,8 @@ public class EncontreDesenhos{
             }
         }
         else if(procurarDesenho==3){
-            System.out.println("Informe o ano do desenho para procura");
-            System.out.println("Os gêneros disponíveis são:\n " + "mistério" + " " + "aventura" + " " + "comédia");
+            System.out.println("Informe o gênero do desenho para procura");
+            System.out.println("Os gêneros disponíveis são:\n " + "mistério" + " " + "aventura" + " " + "comédia" + " " + "fantasia");
         };
     }
 }
