@@ -21,14 +21,20 @@ public class EncontreDesenhos{
         String genero3[] = {"comédia", "aventura", "fantasia"};
         String resenha3 = "Acompanhe o cotidiano de uma divertida família cujos sete irmãos estão sob os cuidados da mãe o tempo todo.\nCada um deles tem diferentes feições monstruosas e divertidas personalidades. Eles enfrentam os desafios da infância\ne se divertem ajudando uns aos outros.";
         
-        System.out.println("Deseja pesquisar o desenho por qual dos seguintes atributos:\n 1 para NOME\n 2 para ANO\n 3 para GÊNERO");
+        String nomeDesenho4 = "Arthur";
+        int dataInicio4 = 1996;
+        int quantidadeTemporadas4 = 25;
+        String genero4[] = {"Comédia"};
+        String resenha4 = "O desenho mostra as aventuras e desventuras de um porquinho-da-terra de oito anos, cujo maior charme é ser\napenas uma criança normal. Acompanhado da irmã e dos amigos, ele consegue resolver os problemas que aparecem, sempre\ncom imaginação, bondade e muito humor.";
+
+        System.out.println("Deseja pesquisar o desenho por qual dos seguintes atributos?\n 1 para NOME\n 2 para ANO\n 3 para GÊNERO");
         int procurarDesenho = ler.nextInt();
         if(procurarDesenho==1){
             System.out.println("Informe o nome do desenho para procura");
         }
         else if(procurarDesenho==2){
             System.out.println("Informe o ano do desenho para procura");
-            System.out.println("Os anos disponíveis são:\n " + dataInicio1 + " " + dataInicio2 + " " + dataInicio3);
+            System.out.println("Os anos disponíveis são:\n " + dataInicio1 + " " + dataInicio2 + " " + dataInicio3 + " " + dataInicio4);
             int procurarDesenhoAno = ler.nextInt();
             switch(procurarDesenhoAno){
                 case 2002:  System.out.println("\nO nome do desenho é: " + nomeDesenho1);
@@ -46,6 +52,10 @@ public class EncontreDesenhos{
                             System.out.println("A quantidade de temporadas é: " + quantidadeTemporadas3);
                             System.out.println("Resenha: " + resenha3 + "\n");
                 break;
+                case 1996:  System.out.println("\nO nome do desenho é: " + nomeDesenho4);
+                            System.out.println("O ano de produção é: " + dataInicio4);
+                            System.out.println("A quantidade de temporadas é: " + quantidadeTemporadas4);
+                            System.out.println("Resenha: " + resenha4 + "\n");
             }
         }
         else if(procurarDesenho==3){
