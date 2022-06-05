@@ -24,43 +24,53 @@ public class EncontreDesenhos{
         String nomeDesenho4 = "Arthur";
         int dataInicio4 = 1996;
         int quantidadeTemporadas4 = 25;
-        String genero4[] = {"Comédia"};
+        String genero4[] = {"comédia", "aventura"};
         String resenha4 = "O desenho mostra as aventuras e desventuras de um porquinho-da-terra de oito anos, cujo maior charme é ser\napenas uma criança normal. Acompanhado da irmã e dos amigos, ele consegue resolver os problemas que aparecem, sempre\ncom imaginação, bondade e muito humor.";
 
         System.out.println("Deseja pesquisar o desenho por qual dos seguintes atributos?\n 1 para NOME\n 2 para ANO\n 3 para GÊNERO");
         int procurarDesenho = ler.nextInt();
-        if(procurarDesenho==1){
-            System.out.println("Informe o nome do desenho para procura");
-        }
-        else if(procurarDesenho==2){
-            System.out.println("Informe o ano do desenho para procura");
-            System.out.println("Os anos disponíveis são:\n " + dataInicio1 + " " + dataInicio2 + " " + dataInicio3 + " " + dataInicio4);
-            int procurarDesenhoAno = ler.nextInt();
-            switch(procurarDesenhoAno){
-                case 2002:  System.out.println("\nO nome do desenho é: " + nomeDesenho1);
-                            System.out.println("O ano de produção é: " + dataInicio1);
-                            System.out.println("A quantidade de temporadas é: " + quantidadeTemporadas1);
-                            System.out.println("Resenha: " + resenha1 + "\n");    
-                break;
-                case 2007:  System.out.println("\nO nome do desenho é: " + nomeDesenho2);
-                            System.out.println("O ano de produção é: " + dataInicio2);
-                            System.out.println("A quantidade de temporadas é: " + quantidadeTemporadas2);
-                            System.out.println("Resenha: " + resenha2 + "\n");
-                break;
-                case 2000:  System.out.println("\nO nome do desenho é: " + nomeDesenho3);
-                            System.out.println("O ano de produção é: " + dataInicio3);
-                            System.out.println("A quantidade de temporadas é: " + quantidadeTemporadas3);
-                            System.out.println("Resenha: " + resenha3 + "\n");
-                break;
-                case 1996:  System.out.println("\nO nome do desenho é: " + nomeDesenho4);
-                            System.out.println("O ano de produção é: " + dataInicio4);
-                            System.out.println("A quantidade de temporadas é: " + quantidadeTemporadas4);
-                            System.out.println("Resenha: " + resenha4 + "\n");
+        boolean continuar = true;
+        while (continuar==true) { 
+            if(procurarDesenho==1){
+                System.out.println("Informe o nome do desenho para procura");
             }
-        }
-        else if(procurarDesenho==3){
-            System.out.println("Informe o gênero do desenho para procura");
-            System.out.println("Os gêneros disponíveis são:\n " + "mistério" + " " + "aventura" + " " + "comédia" + " " + "fantasia");
+            else if(procurarDesenho==2){
+                System.out.println("Informe o ano do desenho para procura");
+                System.out.println("Os anos disponíveis são:\n " + dataInicio1 + " " + dataInicio2 + " " + dataInicio3 + " " + dataInicio4);
+                int procurarDesenhoAno = ler.nextInt();
+                switch(procurarDesenhoAno){
+                    case 2002:  System.out.println("\nO nome do desenho é: " + nomeDesenho1);
+                                System.out.println("O ano de produção é: " + dataInicio1);
+                                System.out.println("A quantidade de temporadas é: " + quantidadeTemporadas1);
+                                System.out.println("Resenha: " + resenha1 + "\n");    
+                    break;
+                    case 2007:  System.out.println("\nO nome do desenho é: " + nomeDesenho2);
+                                System.out.println("O ano de produção é: " + dataInicio2);
+                                System.out.println("A quantidade de temporadas é: " + quantidadeTemporadas2);
+                                System.out.println("Resenha: " + resenha2 + "\n");
+                    break;
+                    case 2000:  System.out.println("\nO nome do desenho é: " + nomeDesenho3);
+                                System.out.println("O ano de produção é: " + dataInicio3);
+                                System.out.println("A quantidade de temporadas é: " + quantidadeTemporadas3);
+                                System.out.println("Resenha: " + resenha3 + "\n");
+                    break;
+                    case 1996:  System.out.println("\nO nome do desenho é: " + nomeDesenho4);
+                                System.out.println("O ano de produção é: " + dataInicio4);
+                                System.out.println("A quantidade de temporadas é: " + quantidadeTemporadas4);
+                                System.out.println("Resenha: " + resenha4 + "\n");
+                }
+            }
+            else if(procurarDesenho==3){
+                System.out.println("Informe o gênero do desenho para procura");
+                System.out.println("Os gêneros disponíveis são:\n " + "mistério" + " " + "aventura" + " " + "comédia" + " " + "fantasia");
+            };
+            System.out.println("Quer continuar procurando? Digite 1 para SIM e 2 para NÃO");
+            int procurarDesenhoNovamente = ler.nextInt();
+            if(procurarDesenhoNovamente==1){
+                continuar = true;
+            } else {
+                continuar = false;
+            };
         };
     }
 }
