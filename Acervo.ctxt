@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Acervo
+comment1.params=
+comment1.target=void\ livrosPrevios()
+comment2.params=ler
+comment2.target=void\ cadastrarLivro(java.util.Scanner)
+comment3.params=
+comment3.target=void\ apresentarLivros()
+comment4.params=livros
+comment4.target=void\ apresentarLivro(java.util.ArrayList)
+comment5.params=escolha\ ler
+comment5.target=void\ decisaoUsuario(int,\ java.util.Scanner)
+comment6.params=ler\ segundaEscolha
+comment6.target=void\ decisaoUsuario(java.util.Scanner,\ int)
+comment7.params=numeroLivro\ ler
+comment7.target=void\ escolheLivro(int,\ java.util.Scanner)
+comment8.params=numeroLivro\ ler
+comment8.target=void\ devolveLivro(int,\ java.util.Scanner)
+numComments=9

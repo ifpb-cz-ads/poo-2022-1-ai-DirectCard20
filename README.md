@@ -1,7 +1,7 @@
 # Projeto Trilha
 ***
 ### Tema:
-Guia para desenhos infantis.
+Livraria para empréstimo de livros
 ### Descrição:
-Existirá uma base de dados previamente cadastrados onde ao requerer-se uma sugestão de desenho infantil é possível fazer uma busca a respeito da descrição, ano de criação, estúdio, temas envolvidos no desenho ou até curiosidades.
-Os títulos possuirão imagens representativas de suas capas. Também é possível aumentar o catálogo de desenhos ao cadastrar mais títulos.
+Existirá 12 livros cadastrados dos quais a pessoa pode escolher qualquer um para pegar emprestado. Há a possibilidade de realizar o cadastro de mais livros por meio de doação à livraria.
+Ao pegar emprestado, o livro ficará indisponível até que ele seja devolvido.

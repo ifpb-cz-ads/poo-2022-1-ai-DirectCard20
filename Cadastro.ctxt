@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=Cadastro
+comment1.params=ler
+comment1.target=void\ cadastrarLivro(java.util.Scanner)
+numComments=2
