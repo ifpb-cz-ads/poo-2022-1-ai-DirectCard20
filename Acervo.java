@@ -62,11 +62,11 @@ public class Acervo implements Cadastro{
         apresentarLivro(livros);
     }
     
-    // Método apresentarLivro sem parâmetro
+    // Método apresentarLivros sem parâmetro
     public void apresentarLivros(){
         int l = 0, m = 1, n = 2, o = 3, p = 4, q = 5;
         for(int i=0;i<Acervo.livros.size()/TAMANHO_LIVROS;i++){
-            System.out.println(livros.get(l) + " --------------------------------------------------------------------------");
+            System.out.println("\n" + livros.get(l) + " --------------------------------------------------------------------------");
             System.out.println("Nome do livro: " + Acervo.livros.get(m) + "\nAutor: " + Acervo.livros.get(n) + "\nAno de lançamento: " + Acervo.livros.get(o) + "\nEditora: " + Acervo.livros.get(p));
             if(Acervo.livros.get(q).equals(true)){
                 System.out.println("### Está disponível ###");
@@ -106,6 +106,8 @@ public class Acervo implements Cadastro{
                     // Chamando método decisaoUsuario
                     decisaoUsuario(ler ,escolha);
                 break;
+            default: System.out.println("Opção inválida.");
+                    operacoesAceitas(ler);
         }
     }
     
@@ -132,6 +134,8 @@ public class Acervo implements Cadastro{
             case 3: // Chamando método cadastrarLivro
                     cadastrarLivro(ler);
                 break;
+            default: System.out.println("Opção inválida.");
+                    operacoesAceitas(ler);
             } 
     }
     
@@ -154,6 +158,8 @@ public class Acervo implements Cadastro{
                     // Chamando método devolveLivro
                     devolveLivro(numeroLivro, ler);
                 break;
+            default: System.out.println("Opção inválida.");
+                    operacoesAceitas(ler);
             }
     }
     
@@ -191,8 +197,12 @@ public class Acervo implements Cadastro{
                                         case 2: //Chamando método cadastrarLivro
                                                 cadastrarLivro(ler);
                                             break;
+                                        default: System.out.println("Opção inválida.");
+                                                operacoesAceitas(ler);
                                     }
                                 break;
+                            default: System.out.println("Opção inválida.");
+                                    operacoesAceitas(ler);
                         }
                     }else {
                         System.out.println("O livro está indisponível. Escolha um livro disponível: ");
@@ -227,12 +237,14 @@ public class Acervo implements Cadastro{
                         System.out.println("Deseja devolver outro livro?\nDigite 1 para SIM ou 2 para NÃO");
                         int novaEscolha = ler.nextInt();
                         switch(novaEscolha){
-                            case 1: apresentarLivros();
+                            case 1: // Chamando método apresentarLivros
+                                    apresentarLivros();
                                     System.out.println("\nDigite o número do livro que você deseja devolver: ");
                                     numeroLivro = ler.nextInt();
                                     // Chamando método devolveLivro
                                     devolveLivro(numeroLivro, ler);
                                 break;
+                                
                             case 2: System.out.println("O que você deseja agora da nossa livraria?\n");
                                     System.out.println("Digite 1 para PEGAR UM LIVRO EMPRESTADO\nDigite 2 para CEDER UM LIVRO PARA A LIVRARIA");
                                     novaEscolha = ler.nextInt();
@@ -248,11 +260,16 @@ public class Acervo implements Cadastro{
                                         case 2: // Chamando método cadastrarLivro
                                                 cadastrarLivro(ler);
                                             break;
+                                        default: System.out.println("Opção inválida.");
+                                                operacoesAceitas(ler);
                                     }
                                 break;
+                            default: System.out.println("Opção inválida.");
+                                    operacoesAceitas(ler);
                         }
-                    }else {
+                    } else{
                         System.out.println("O livro já estava disponível. Escolha um livro indisponível para devolver: ");
+                        numeroLivro = 0;
                         numeroLivro = ler.nextInt();
                         // Chamando método devolveLivro
                         devolveLivro(numeroLivro, ler);
@@ -267,5 +284,13 @@ public class Acervo implements Cadastro{
             // Chamando método devolveLivro
             devolveLivro(numeroLivro, ler);
         }  
+    }
+    
+    // Método operacoesAceitas com 1 parâmetro
+    public void operacoesAceitas(Scanner ler){
+        System.out.println("\nDigite 1 para PEGAR UM LIVRO EMPRESTADO\nDigite 2 para DEVOLVER UM LIVRO EMPRESTADO\nDigite 3 para CEDER UM LIVRO PARA A LIVRARIA");
+        int escolha = ler.nextInt();
+        // Chamando método escolhaUsuario
+        decisaoUsuario(escolha, ler);
     }
 }

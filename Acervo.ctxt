@@ -16,4 +16,6 @@ comment7.params=numeroLivro\ ler
 comment7.target=void\ escolheLivro(int,\ java.util.Scanner)
 comment8.params=numeroLivro\ ler
 comment8.target=void\ devolveLivro(int,\ java.util.Scanner)
-numComments=9
+comment9.params=ler
+comment9.target=void\ operacoesAceitas(java.util.Scanner)
+numComments=10
